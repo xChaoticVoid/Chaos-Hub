@@ -17,7 +17,7 @@ local GUI = Mercury:Create{
 
 GUI:Notification{
 	Title = "Game Detected",
-	Text = " ",
+	Text = "Adventurer Simulator!",
 	Duration = 3,
 	Callback = function() end
 }
