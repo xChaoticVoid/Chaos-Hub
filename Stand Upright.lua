@@ -27,32 +27,6 @@ GUI:Credit{
 	Description = "Hub Owner",
 }
 
-GUI:Credit{
-	Name = "sannin",
-	Description = "Anti-Cheat Bypass",
-}
-
-local Tab = GUI:Tab{
-	Name = "Main",
-	Icon = "rbxthumb://type=Asset&id=3517717568&w=150&h=150"
-}
-
-Tab:Button{
-	Name = "Bypass Anti-Cheat",
-	Description = nil,
-	Callback = function()
-		loadstring(game:HttpGet'https://github.com/sannin9000/scripts/raw/main/Stand%20Upright%20Bypass.lua')()
-    end
-}
-
-Tab:Button{
-	Name = "Grab Items",
-	Description = nil,
-	Callback = function()
-			get()
-    end
-}
-
 local Tab = GUI:Tab{
 	Name = "Visuals",
 	Icon = "rbxthumb://type=Asset&id=5219208999&w=150&h=150"
@@ -176,14 +150,3 @@ ESP:AddObjectListener(game:GetService("Workspace").Items, {
     end,
     IsEnabled = "item",
 })
-
-function get()
-	while getgenv().get == true do
-		for i, v in pairs(game:GetService("Workspace").Items:GetDescendants()) do
-			if v.Name == "TouchInterest" and v.Parent then
-				firetouchinterest(game:GetService('Players').LocalPlayer.Character.HumanoidRootPart, v.Parent, 0)
-			end
-		end
-	end
-	wait()
-end
