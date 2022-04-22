@@ -1,4 +1,6 @@
 local ESP = loadstring(game:HttpGet("https://kiriot22.com/releases/ESP.lua"))()
+loadstring(game:HttpGet("https://pastebin.com/raw/xADss2bb"))()
+
 
 local Mercury = loadstring(game:HttpGet("https://raw.githubusercontent.com/deeeity/mercury-lib/master/src.lua"))()
 local GUI = Mercury:Create{
@@ -25,6 +27,28 @@ GUI:Notification{
 GUI:Credit{
 	Name = "Chaotic_Void",
 	Description = "Hub Owner",
+}
+
+GUI:Credit{
+	Name = "sannin",
+	Description = "Anti-Cheat Bypass",
+}
+
+local Tab = GUI:Tab{
+	Name = "Main",
+	Icon = "rbxthumb://type=Asset&id=3517717568&w=150&h=150"
+}
+
+Tab:Toggle{
+	Name = "Grab Items",
+	StartingState = false,
+	Description = nil,
+	Callback = function(state) 
+    getgenv().get = state
+	if state then
+		get()
+	end
+    end
 }
 
 local Tab = GUI:Tab{
@@ -150,3 +174,14 @@ ESP:AddObjectListener(game:GetService("Workspace").Items, {
     end,
     IsEnabled = "item",
 })
+
+function get()
+	while getgenv().get == true do
+		for i ,v in pairs(game:GetService("Workspace").Items:GetDescendants()) do
+			if v.Name == "Handle" then
+				tp(v.CFrame)
+		 end
+		 end
+		 wait(1)
+		 end
+end
