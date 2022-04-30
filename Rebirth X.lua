@@ -82,6 +82,64 @@ Tab:Toggle{
     end
 }
 
+ad = {}
+for i,v in pairs(game:GetService("ReplicatedStorage").Assets.Eggs:GetChildren()) do
+if v:IsA('Model') then
+   if not table.find(ad, v.Name) then
+       table.insert(ad, v.Name)
+   end 
+end
+end
+
+local MyDropdown = Tab:Dropdown{
+	Name = "Eggs",
+	StartingText = "List Of Eggs",
+	Description = nil,
+	Items = 
+    ad,
+	Callback = function(c)
+        Eggs = c
+    end
+}
+
+Tab:Toggle{
+	Name = "Auto Open Egg(triple)",
+	StartingState = false,
+	Description = nil,
+	Callback = function(state)
+        if state then
+            getgenv().open = true
+            while getgenv().open == true do
+            local ohString1 = Eggs
+            local ohString2 = "Triple"
+            game:GetService("ReplicatedStorage").Functions.Unbox:InvokeServer(ohString1, ohString2)
+            wait()
+            end
+    else
+        getgenv().open = false
+    end
+    end
+}
+
+Tab:Toggle{
+	Name = "Auto Open Egg(single)",
+	StartingState = false,
+	Description = nil,
+	Callback = function(state)
+        if state then
+            getgenv().open = true
+            while getgenv().open == true do
+            local ohString1 = Eggs
+            local ohString2 = "Single"
+            game:GetService("ReplicatedStorage").Functions.Unbox:InvokeServer(ohString1, ohString2)
+            wait()
+            end
+    else
+        getgenv().open = false
+    end
+    end
+}
+
 local Tab = GUI:Tab{
 	Name = "Misc",
 	Icon = "rbxthumb://type=Asset&id=3331928717&w=150&h=150"
