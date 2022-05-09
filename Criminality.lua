@@ -2,34 +2,54 @@ local ESP = loadstring(game:HttpGet("https://kiriot22.com/releases/ESP.lua"))()
 
 local Mercury = loadstring(game:HttpGet("https://raw.githubusercontent.com/deeeity/mercury-lib/master/src.lua"))()
 local GUI = Mercury:Create{
-    Name = "Chaos",
+    Name = "Criminality",
     Size = UDim2.fromOffset(600, 400),
     Theme = Mercury.Themes.Dark,
     Link = "https://github.com/deeeity/mercury-lib"
 }
 
-GUI:Notification{
-	Title = "Game Detected",
-	Text = "Criminality",
-	Duration = 3,
-	Callback = function() end
+local Tab = GUI:Tab{
+	Name = "Main",
+	Icon = "rbxthumb://type=Asset&id=3517717568&w=150&h=150"
 }
 
-GUI:Notification{
-	Title = "Discord",
-	Text = "Make Sure To Join The Discord Server! :D",
-	Duration = 3,
-	Callback = function() end
+Tab:Button{
+	Name = "No Fall Damage",
+	Description = nil,
+	Callback = function()
+        local oldNamecall
+        oldNamecall =
+            hookmetamethod(
+            game,
+            "__namecall",
+            newcclosure(
+                function(...)
+                    if (not checkcaller() and getnamecallmethod() == "FireServer" and NoFall) then
+                        local tab = ...
+                        if (tostring(tab) == "__DFfDD") then
+                            return
+                        end
+                    end
+
+                    return oldNamecall(...)
+                end
+            )
+        )    end
 }
 
-GUI:Credit{
-	Name = "Chaotic_Void",
-	Description = "Hub Owner",
-}
-
-GUI:Credit{
-	Name = "Kiriot22",
-	Description = "KiriotHub's ESP lib",
+Tab:Button{
+	Name = "Inf Stamina",
+	Description = nil,
+	Callback = function()
+        local oldStamina
+        oldStamina =
+            hookfunction(
+            getupvalue(getrenv()._G.S_Take, 2),
+            function(v1, ...)
+                    v1 = 0
+                return oldStamina(v1, ...)
+            end
+        )  end
 }
 
 local Tab = GUI:Tab{
@@ -115,25 +135,6 @@ Tab:Toggle{
 	Description = nil,
 	Callback = function(state) 
         ESP.dick = state
-    end
-}
-
-local Tab = GUI:Tab{
-	Name = "Discord",
-	Icon = "rbxthumb://type=Asset&id=9334666836&w=150&h=150"
-}
-
-Tab:Button{
-	Name = "Copy Discord Server Invite",
-	Description = nil,
-	Callback = function()
-        GUI:Notification{
-            Title = "Discord",
-            Text = "Discord Invite Has Been Copied!",
-            Duration = 3,
-            Callback = function() end
-        }
-        setclipboard("https://discord.gg/wk7Wer9rGk")
     end
 }
 
