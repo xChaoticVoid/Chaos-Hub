@@ -1,0 +1,227 @@
+local Mercury = loadstring(game:HttpGet("https://raw.githubusercontent.com/deeeity/mercury-lib/master/src.lua"))()
+local GUI = Mercury:Create{
+    Name = "ChaosHub",
+    Size = UDim2.fromOffset(600, 400),
+    Theme = Mercury.Themes.Dark,
+    Link = "https://github.com/deeeity/mercury-lib"
+}
+
+GUI:Notification{
+	Title = "Game Detected",
+	Text = "A 0ne Piece Game",
+	Duration = 3,
+	Callback = function() end
+}
+
+GUI:Notification{
+	Title = "Discord",
+	Text = "Make Sure To Join The Discord Server! :D",
+	Duration = 3,
+	Callback = function() end
+}
+
+GUI:Credit{
+	Name = "Chaotic_Void",
+	Description = "Hub Owner",
+}
+
+local Tab = GUI:Tab{
+	Name = "Main",
+	Icon = "rbxthumb://type=Asset&id=3517717568&w=150&h=150"
+}
+
+Tab:Toggle{
+	Name = "Auto Strength",
+	StartingState = false,
+	Description = nil,
+	Callback = function(state) 
+	getgenv().str = state
+	if state then
+    str()
+	end
+end
+}
+
+Tab:Toggle{
+	Name = "Auto Fruit",
+	StartingState = false,
+	Description = nil,
+	Callback = function(state) 
+	getgenv().fruit = state
+	if state then
+	fruit()
+	end
+end
+}
+
+Tab:Toggle{
+	Name = "Auto Sword",
+	StartingState = false,
+	Description = nil,
+	Callback = function(state) 
+	getgenv().Sword = state
+	if state then
+    Sword()
+	end
+end
+}
+
+Tab:Toggle{
+	Name = "Auto Haki",
+	StartingState = false,
+	Description = nil,
+	Callback = function(state) 
+	getgenv().haki = state
+	if state then
+    haki()
+	end
+end
+}
+
+local Tab = GUI:Tab{
+	Name = "Discord",
+	Icon = "rbxthumb://type=Asset&id=9334666836&w=150&h=150"
+}
+
+Tab:Button{
+	Name = "Copy Discord Server Invite",
+	Description = nil,
+	Callback = function()
+        GUI:Notification{
+            Title = "Discord",
+            Text = "Discord Invite Has Been Copied!",
+            Duration = 3,
+            Callback = function() end
+        }
+        setclipboard("https://discord.gg/wk7Wer9rGk")
+    end
+}
+
+
+
+
+-----Scripts
+
+function str()
+	while getgenv().str == true do
+	local ohString1 = "Fighting Style"
+	local ohString2 = "Q"
+	local ohCFrame3 = CFrame.new(-3847.5083, -21.9207878, 601.608826, 0.634917915, 0.209358484, -0.743672192, -0, 0.962583303, 0.270986289, 0.77257961, -0.172054052, 0.611161351)
+    local ohInstance4 = workspace.Map.Islands["Logue Town"].Model.Trees.Newtree["Meshes/bush"]
+	local ohNumber5 = 5
+	game:GetService("ReplicatedStorage").Remotes.requestAbility:FireServer(ohString1, ohString2, ohCFrame3, ohInstance4, ohNumber5)
+	local ohString1 = "Fighting Style"
+	local ohString2 = "E"
+	local ohCFrame3 = CFrame.new(-3847.5083, -21.9207878, 601.608826, 0.634917915, 0.209358484, -0.743672192, -0, 0.962583303, 0.270986289, 0.77257961, -0.172054052, 0.611161351)
+    local ohInstance4 = workspace.Map.Islands["Logue Town"].Model.Trees.Newtree["Meshes/bush"]
+	local ohNumber5 = 5
+	game:GetService("ReplicatedStorage").Remotes.requestAbility:FireServer(ohString1, ohString2, ohCFrame3, ohInstance4, ohNumber5)
+	local ohString1 = "Fighting Style"
+	local ohString2 = "R"
+	local ohCFrame3 = CFrame.new(-3847.5083, -21.9207878, 601.608826, 0.634917915, 0.209358484, -0.743672192, -0, 0.962583303, 0.270986289, 0.77257961, -0.172054052, 0.611161351)
+    local ohInstance4 = workspace.Map.Islands["Logue Town"].Model.Trees.Newtree["Meshes/bush"]
+	local ohNumber5 = 5
+	game:GetService("ReplicatedStorage").Remotes.requestAbility:FireServer(ohString1, ohString2, ohCFrame3, ohInstance4, ohNumber5)
+	local ohString1 = "Fighting Style"
+	local ohString2 = "F"
+	local ohCFrame3 = CFrame.new(-3847.5083, -21.9207878, 601.608826, 0.634917915, 0.209358484, -0.743672192, -0, 0.962583303, 0.270986289, 0.77257961, -0.172054052, 0.611161351)
+    local ohInstance4 = workspace.Map.Islands["Logue Town"].Model.Trees.Newtree["Meshes/bush"]
+	local ohNumber5 = 5
+	game:GetService("ReplicatedStorage").Remotes.requestAbility:FireServer(ohString1, ohString2, ohCFrame3, ohInstance4, ohNumber5)
+	local ohString1 = "Fighting Style"
+	local ohString2 = "T"
+	local ohCFrame3 = CFrame.new(-3847.5083, -21.9207878, 601.608826, 0.634917915, 0.209358484, -0.743672192, -0, 0.962583303, 0.270986289, 0.77257961, -0.172054052, 0.611161351)
+    local ohInstance4 = workspace.Map.Islands["Logue Town"].Model.Trees.Newtree["Meshes/bush"]
+	local ohNumber5 = 5
+	game:GetService("ReplicatedStorage").Remotes.requestAbility:FireServer(ohString1, ohString2, ohCFrame3, ohInstance4, ohNumber5)
+	wait()
+end
+end
+
+function Sword()
+	while getgenv().Sword == true do
+	local ohString1 = "Sword Style"
+	local ohString2 = "Q"
+	local ohCFrame3 = CFrame.new(-3847.5083, -21.9207878, 601.608826, 0.634917915, 0.209358484, -0.743672192, -0, 0.962583303, 0.270986289, 0.77257961, -0.172054052, 0.611161351)
+    local ohInstance4 = workspace.Map.Islands["Logue Town"].Model.Trees.Newtree["Meshes/bush"]
+	local ohNumber5 = 5
+	game:GetService("ReplicatedStorage").Remotes.requestAbility:FireServer(ohString1, ohString2, ohCFrame3, ohInstance4, ohNumber5)
+	local ohString1 = "Sword Style"
+	local ohString2 = "E"
+	local ohCFrame3 = CFrame.new(-3847.5083, -21.9207878, 601.608826, 0.634917915, 0.209358484, -0.743672192, -0, 0.962583303, 0.270986289, 0.77257961, -0.172054052, 0.611161351)
+    local ohInstance4 = workspace.Map.Islands["Logue Town"].Model.Trees.Newtree["Meshes/bush"]
+	local ohNumber5 = 5
+	game:GetService("ReplicatedStorage").Remotes.requestAbility:FireServer(ohString1, ohString2, ohCFrame3, ohInstance4, ohNumber5)
+	local ohString1 = "Sword Style"
+	local ohString2 = "R"
+	local ohCFrame3 = CFrame.new(-3847.5083, -21.9207878, 601.608826, 0.634917915, 0.209358484, -0.743672192, -0, 0.962583303, 0.270986289, 0.77257961, -0.172054052, 0.611161351)
+    local ohInstance4 = workspace.Map.Islands["Logue Town"].Model.Trees.Newtree["Meshes/bush"]
+	local ohNumber5 = 5
+	game:GetService("ReplicatedStorage").Remotes.requestAbility:FireServer(ohString1, ohString2, ohCFrame3, ohInstance4, ohNumber5)
+	local ohString1 = "Sword Style"
+	local ohString2 = "F"
+	local ohCFrame3 = CFrame.new(-3847.5083, -21.9207878, 601.608826, 0.634917915, 0.209358484, -0.743672192, -0, 0.962583303, 0.270986289, 0.77257961, -0.172054052, 0.611161351)
+    local ohInstance4 = workspace.Map.Islands["Logue Town"].Model.Trees.Newtree["Meshes/bush"]
+	local ohNumber5 = 5
+	game:GetService("ReplicatedStorage").Remotes.requestAbility:FireServer(ohString1, ohString2, ohCFrame3, ohInstance4, ohNumber5)
+	local ohString1 = "Sword Style"
+	local ohString2 = "T"
+	local ohCFrame3 = CFrame.new(-3847.5083, -21.9207878, 601.608826, 0.634917915, 0.209358484, -0.743672192, -0, 0.962583303, 0.270986289, 0.77257961, -0.172054052, 0.611161351)
+    local ohInstance4 = workspace.Map.Islands["Logue Town"].Model.Trees.Newtree["Meshes/bush"]
+	local ohNumber5 = 5
+	game:GetService("ReplicatedStorage").Remotes.requestAbility:FireServer(ohString1, ohString2, ohCFrame3, ohInstance4, ohNumber5)
+	wait()
+end
+end
+
+
+function fruit()
+	while getgenv().fruit == true do
+	local ohString1 = "Devil Fruit"
+	local ohString2 = "Q"
+	local ohCFrame3 = CFrame.new(-3847.5083, -21.9207878, 601.608826, 0.634917915, 0.209358484, -0.743672192, -0, 0.962583303, 0.270986289, 0.77257961, -0.172054052, 0.611161351)
+    local ohInstance4 = workspace.Map.Islands["Logue Town"].Model.Trees.Newtree["Meshes/bush"]
+	local ohNumber5 = 5
+	game:GetService("ReplicatedStorage").Remotes.requestAbility:FireServer(ohString1, ohString2, ohCFrame3, ohInstance4, ohNumber5)
+	local ohString1 = "Devil Fruit"
+	local ohString2 = "E"
+	local ohCFrame3 = CFrame.new(-3847.5083, -21.9207878, 601.608826, 0.634917915, 0.209358484, -0.743672192, -0, 0.962583303, 0.270986289, 0.77257961, -0.172054052, 0.611161351)
+    local ohInstance4 = workspace.Map.Islands["Logue Town"].Model.Trees.Newtree["Meshes/bush"]
+	local ohNumber5 = 5
+	game:GetService("ReplicatedStorage").Remotes.requestAbility:FireServer(ohString1, ohString2, ohCFrame3, ohInstance4, ohNumber5)
+	local ohString1 = "Devil Fruit"
+	local ohString2 = "R"
+	local ohCFrame3 = CFrame.new(-3847.5083, -21.9207878, 601.608826, 0.634917915, 0.209358484, -0.743672192, -0, 0.962583303, 0.270986289, 0.77257961, -0.172054052, 0.611161351)
+    local ohInstance4 = workspace.Map.Islands["Logue Town"].Model.Trees.Newtree["Meshes/bush"]
+	local ohNumber5 = 5
+	game:GetService("ReplicatedStorage").Remotes.requestAbility:FireServer(ohString1, ohString2, ohCFrame3, ohInstance4, ohNumber5)
+	local ohString1 = "Devil Fruit"
+	local ohString2 = "F"
+	local ohCFrame3 = CFrame.new(-3847.5083, -21.9207878, 601.608826, 0.634917915, 0.209358484, -0.743672192, -0, 0.962583303, 0.270986289, 0.77257961, -0.172054052, 0.611161351)
+    local ohInstance4 = workspace.Map.Islands["Logue Town"].Model.Trees.Newtree["Meshes/bush"]
+	local ohNumber5 = 5
+	game:GetService("ReplicatedStorage").Remotes.requestAbility:FireServer(ohString1, ohString2, ohCFrame3, ohInstance4, ohNumber5)
+	local ohString1 = "Devil Fruit"
+	local ohString2 = "T"
+	local ohCFrame3 = CFrame.new(-3847.5083, -21.9207878, 601.608826, 0.634917915, 0.209358484, -0.743672192, -0, 0.962583303, 0.270986289, 0.77257961, -0.172054052, 0.611161351)
+    local ohInstance4 = workspace.Map.Islands["Logue Town"].Model.Trees.Newtree["Meshes/bush"]
+	local ohNumber5 = 5
+	game:GetService("ReplicatedStorage").Remotes.requestAbility:FireServer(ohString1, ohString2, ohCFrame3, ohInstance4, ohNumber5)
+	wait()
+end
+end
+
+function haki()
+while getgenv().haki == true do
+local ohString1 = "Fighting Style"
+local ohString2 = "G"
+local ohNumber5 = 5
+game:GetService("ReplicatedStorage").Remotes.requestAbility:FireServer(ohString1, ohString2, ohCFrame3, ohInstance4, ohNumber5)
+
+local ohString1 = "Sword Style"
+local ohString2 = "G"
+local ohNumber5 = 5
+game:GetService("ReplicatedStorage").Remotes.requestAbility:FireServer(ohString1, ohString2, ohCFrame3, ohInstance4, ohNumber5)
+wait(10)
+end
+end
